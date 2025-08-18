@@ -1,0 +1,434 @@
+---
+layout: base.njk
+title: Course Tracks
+description: Visual guides for popular course combinations like DS minor, core tracks, and more
+---
+
+<!-- Header Section -->
+<section class="bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Course Tracks</h1>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                Visual guides for popular course combinations and academic pathways
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Track Navigation -->
+<section class="py-8 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button data-filter="all" class="px-6 py-3 rounded-lg bg-accent text-white font-medium transition-colors">
+                All Tracks
+            </button>
+            <button data-filter="minor" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Minors
+            </button>
+            <button data-filter="core" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Core Tracks
+            </button>
+            <button data-filter="elective" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Elective Tracks
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Tracks Grid -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- DS Minor Track -->
+            <div data-category="minor" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary">Data Science Minor</h3>
+                        <p class="text-accent font-semibold">Popular Choice</p>
+                    </div>
+                    <span class="badge badge-minor">Minor</span>
+                </div>
+                
+                <!-- Requirements -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Requirements</h4>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Minimum CPI: 8.0</li>
+                        <li>• Total Credits: 18</li>
+                        <li>• Duration: 3rd to 4th Year</li>
+                        <li>• Department Approval Required</li>
+                    </ul>
+                </div>
+                
+                <!-- Course Sequence -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Course Sequence</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">CS 101 - Computer Programming</p>
+                                <p class="text-xs text-text-secondary">Prerequisite for all DS courses</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">MA 106 - Linear Algebra</p>
+                                <p class="text-xs text-text-secondary">Mathematical foundation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">DS 101 - Introduction to Data Science</p>
+                                <p class="text-xs text-text-secondary">Core DS course</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">4</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">DS 201 - Machine Learning</p>
+                                <p class="text-xs text-text-secondary">Advanced DS course</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">5</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">DS 301 - Deep Learning</p>
+                                <p class="text-xs text-text-secondary">Specialized course</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notes -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Important Notes</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Apply early in 3rd year</li>
+                        <li>• Maintain CPI above 8.0</li>
+                        <li>• Some courses have limited seats</li>
+                        <li>• Good for software/ML careers</li>
+                    </ul>
+                </div>
+                
+                <a href="/tracks/ds-minor" class="btn-primary inline-block w-full text-center">
+                    View Detailed Track
+                </a>
+            </div>
+
+            <!-- Overambitious DS Minor -->
+            <div data-category="minor" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary">Overambitious DS Minor</h3>
+                        <p class="text-accent font-semibold">Advanced Track</p>
+                    </div>
+                    <span class="badge badge-minor">Minor</span>
+                </div>
+                
+                <!-- Requirements -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Requirements</h4>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Minimum CPI: 8.5</li>
+                        <li>• Total Credits: 24</li>
+                        <li>• Duration: 3rd to 4th Year</li>
+                        <li>• High workload warning</li>
+                    </ul>
+                </div>
+                
+                <!-- Course Sequence -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Additional Courses</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">+</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">CS 201 - Data Structures</p>
+                                <p class="text-xs text-text-secondary">Programming fundamentals</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">+</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">DS 401 - Big Data Analytics</p>
+                                <p class="text-xs text-text-secondary">Advanced analytics</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">+</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">DS 501 - Research Project</p>
+                                <p class="text-xs text-text-secondary">Capstone project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notes -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Important Notes</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Very high workload</li>
+                        <li>• May affect core courses</li>
+                        <li>• Excellent for research careers</li>
+                        <li>• Requires strong time management</li>
+                    </ul>
+                </div>
+                
+                <a href="/tracks/overambitious-ds" class="btn-primary inline-block w-full text-center">
+                    View Detailed Track
+                </a>
+            </div>
+
+            <!-- Core Mechanical Track -->
+            <div data-category="core" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary">Core Mechanical Track</h3>
+                        <p class="text-accent font-semibold">Traditional Path</p>
+                    </div>
+                    <span class="badge badge-core">Core</span>
+                </div>
+                
+                <!-- Requirements -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Requirements</h4>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• All core courses mandatory</li>
+                        <li>• Total Credits: 120+</li>
+                        <li>• Duration: 4 Years</li>
+                        <li>• Standard curriculum</li>
+                    </ul>
+                </div>
+                
+                <!-- Course Sequence -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Key Courses</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 101 - Engineering Mechanics</p>
+                                <p class="text-xs text-text-secondary">Foundation course</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 201 - Thermodynamics</p>
+                                <p class="text-xs text-text-secondary">Core mechanical concept</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 301 - Machine Design</p>
+                                <p class="text-xs text-text-secondary">Design principles</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">4</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 401 - Manufacturing</p>
+                                <p class="text-xs text-text-secondary">Production processes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notes -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Career Paths</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Traditional mechanical engineering</li>
+                        <li>• Manufacturing and production</li>
+                        <li>• Automotive industry</li>
+                        <li>• Consulting and design</li>
+                    </ul>
+                </div>
+                
+                <a href="/tracks/core-mechanical" class="btn-primary inline-block w-full text-center">
+                    View Detailed Track
+                </a>
+            </div>
+
+            <!-- Research Track -->
+            <div data-category="elective" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-text-primary">Research Track</h3>
+                        <p class="text-accent font-semibold">Academic Focus</p>
+                    </div>
+                    <span class="badge badge-elective">Elective</span>
+                </div>
+                
+                <!-- Requirements -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Requirements</h4>
+                    <ul class="text-sm text-text-secondary space-y-2">
+                        <li>• Minimum CPI: 8.5</li>
+                        <li>• Research experience preferred</li>
+                        <li>• Professor approval required</li>
+                        <li>• Publication opportunities</li>
+                    </ul>
+                </div>
+                
+                <!-- Course Sequence -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-3">Recommended Courses</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">1</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 501 - Advanced Mechanics</p>
+                                <p class="text-xs text-text-secondary">Research-level course</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">2</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 601 - Research Methods</p>
+                                <p class="text-xs text-text-secondary">Methodology course</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center mr-3">
+                                <span class="text-white text-xs font-bold">3</span>
+                            </div>
+                            <div>
+                                <p class="font-medium text-text-primary">ME 701 - Thesis Project</p>
+                                <p class="text-xs text-text-secondary">Research project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Notes -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Important Notes</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Excellent for PhD preparation</li>
+                        <li>• Strong academic focus</li>
+                        <li>• Publication opportunities</li>
+                        <li>• Professor mentorship crucial</li>
+                    </ul>
+                </div>
+                
+                <a href="/tracks/research" class="btn-primary inline-block w-full text-center">
+                    View Detailed Track
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Track Comparison -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-text-primary mb-12 text-center">Track Comparison</h2>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-gray-50">
+                        <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Track</th>
+                        <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Difficulty</th>
+                        <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Workload</th>
+                        <th class="border border-gray-200 px-4 py-3 text-left font-semibold">Career Scope</th>
+                        <th class="border border-gray-200 px-4 py-3 text-left font-semibold">CPI Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-200 px-4 py-3 font-medium">DS Minor</td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-medium badge">Medium</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-medium badge">Medium</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3 text-sm">Software, ML, Analytics</td>
+                        <td class="border border-gray-200 px-4 py-3">8.0+</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="border border-gray-200 px-4 py-3 font-medium">Overambitious DS</td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-hard badge">Hard</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-hard badge">High</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3 text-sm">Research, Advanced ML</td>
+                        <td class="border border-gray-200 px-4 py-3">8.5+</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-200 px-4 py-3 font-medium">Core Mechanical</td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-medium badge">Medium</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-medium badge">Medium</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3 text-sm">Traditional ME, Manufacturing</td>
+                        <td class="border border-gray-200 px-4 py-3">7.5+</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                        <td class="border border-gray-200 px-4 py-3 font-medium">Research Track</td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-hard badge">Hard</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3">
+                            <span class="difficulty-hard badge">High</span>
+                        </td>
+                        <td class="border border-gray-200 px-4 py-3 text-sm">Academia, Research</td>
+                        <td class="border border-gray-200 px-4 py-3">8.5+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section> 

@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - MEMS D-AMP Blog</title>
+    <meta name="description" content="Documentation of all events conducted by MEMS D-AMP - resume sessions, SOPHIE 101, dual degree sessions, and more">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="/css/styles.css" rel="stylesheet">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body class="font-inter bg-primary text-text-primary min-h-screen">
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center space-x-2">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center">
+                        <img src="/images/Final DAMP logo (Without text).png" alt="MEMS D-AMP Logo" class="w-12 h-12 object-contain"/>
+                    </div>
+                    <span class="text-xl font-bold text-text-primary">MEMS D-AMP</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="/" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="/courses" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Course Reviews</a>
+                    <a href="/tracks" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Course Tracks</a>
+                    <a href="/experiences" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Experiences</a>
+                    <a href="/events" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Events</a>
+                    <a href="/team" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Team</a>
+                    <a href="/support" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-text-primary hover:text-accent focus:outline-none focus:text-accent">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="/" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/courses" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Course Reviews</a>
+            <a href="/tracks" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Course Tracks</a>
+            <a href="/experiences" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Experiences</a>
+            <a href="/events" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Events</a>
+            <a href="/team" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="/support" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Support</a>
+        </div>
+    </div>
+</nav> 
+    
+    <!-- Main Content -->
+    <main class="min-h-screen">
+        
+<!-- Header Section -->
+<section class="bg-gradient-to-r from-pink-500 to-red-600 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Events</h1>
+            <p class="text-xl opacity-90 max-w-3xl mx-auto">
+                Documentation of all events conducted by MEMS D-AMP - resume sessions, workshops, and information sessions
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Event Categories -->
+<section class="py-8 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-4 justify-center">
+            <button data-filter="all" class="px-6 py-3 rounded-lg bg-accent text-white font-medium transition-colors">
+                All Events
+            </button>
+            <button data-filter="resume" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Resume Sessions
+            </button>
+            <button data-filter="sophie" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                SOPHIE 101
+            </button>
+            <button data-filter="dual-degree" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Dual Degree
+            </button>
+            <button data-filter="workshop" class="px-6 py-3 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-accent hover:text-white transition-colors">
+                Workshops
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Events Grid -->
+<section class="py-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Resume Building Session -->
+            <div data-category="resume" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Resume Building Workshop</h3>
+                        <p class="text-lg font-semibold text-accent">Session 1</p>
+                    </div>
+                    <span class="badge badge-core">Resume</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>October 15, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 2 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 45 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        Comprehensive workshop on resume building for internship applications. Covered ATS optimization, formatting best practices, and content organization.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Use action verbs and quantifiable achievements</li>
+                        <li>• Keep resume to 1 page for internships</li>
+                        <li>• Tailor resume for each application</li>
+                        <li>• Include relevant projects and skills</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📄 Resume Template</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📊 Sample Resumes</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOPHIE 101 Workshop -->
+            <div data-category="sophie" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">SOPHIE 101 Workshop</h3>
+                        <p class="text-lg font-semibold text-accent">Statement of Purpose</p>
+                    </div>
+                    <span class="badge badge-elective">SOPHIE</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>November 5, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 3 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 32 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        In-depth workshop on writing effective Statements of Purpose for higher studies applications. Covered structure, content, and common mistakes.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Start with a compelling hook</li>
+                        <li>• Show research alignment</li>
+                        <li>• Include specific examples</li>
+                        <li>• Keep it concise and focused</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📝 SOP Template</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📖 Sample SOPs</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dual Degree Information Session -->
+            <div data-category="dual-degree" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Dual Degree Session</h3>
+                        <p class="text-lg font-semibold text-accent">Information & Guidance</p>
+                    </div>
+                    <span class="badge badge-minor">Dual Degree</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>September 20, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 2.5 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 28 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        Comprehensive session on dual degree programs at IIT Bombay. Covered application process, requirements, and career implications.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Apply in 2nd year</li>
+                        <li>• Minimum CPI requirement varies</li>
+                        <li>• Additional 1-2 years of study</li>
+                        <li>• Enhanced career opportunities</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📋 Application Guide</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📊 Program Details</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technical Interview Prep -->
+            <div data-category="workshop" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Technical Interview Prep</h3>
+                        <p class="text-lg font-semibold text-accent">Coding & Problem Solving</p>
+                    </div>
+                    <span class="badge badge-elective">Workshop</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>October 25, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 4 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 38 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        Intensive workshop on technical interview preparation. Covered data structures, algorithms, and problem-solving strategies.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Practice on platforms like LeetCode</li>
+                        <li>• Focus on time complexity</li>
+                        <li>• Communicate your approach</li>
+                        <li>• Practice mock interviews</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📚 Study Guide</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">💻 Practice Problems</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alumni Interaction Session -->
+            <div data-category="workshop" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Alumni Interaction</h3>
+                        <p class="text-lg font-semibold text-accent">Career Guidance</p>
+                    </div>
+                    <span class="badge badge-minor">Workshop</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>November 12, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 3 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 52 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        Interactive session with MEMS alumni working in various industries. Shared career experiences and industry insights.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Network with alumni</li>
+                        <li>• Industry trends and opportunities</li>
+                        <li>• Career path guidance</li>
+                        <li>• Internship and job referrals</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">👥 Alumni Network</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">💼 Career Guide</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Symposium -->
+            <div data-category="workshop" class="card hover:shadow-xl transition-all duration-300">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-text-primary">Research Symposium</h3>
+                        <p class="text-lg font-semibold text-accent">Student Presentations</p>
+                    </div>
+                    <span class="badge badge-minor">Workshop</span>
+                </div>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                        <span>December 8, 2024</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Duration: 6 hours</span>
+                    </div>
+                    
+                    <div class="flex items-center text-sm text-text-secondary">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <span>Attendees: 65 students</span>
+                    </div>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Event Summary</h4>
+                    <p class="text-sm text-text-secondary">
+                        Annual research symposium showcasing student projects and research work. Featured presentations from 4th year students and faculty talks.
+                    </p>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Key Takeaways</h4>
+                    <ul class="text-sm text-text-secondary space-y-1">
+                        <li>• Research presentation skills</li>
+                        <li>• Current research trends</li>
+                        <li>• Collaboration opportunities</li>
+                        <li>• Publication guidance</li>
+                    </ul>
+                </div>
+                
+                <div class="mb-6">
+                    <h4 class="font-semibold text-text-primary mb-2">Resources</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📊 Presentations</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">📖 Research Papers</a>
+                        <a href="#" class="text-accent hover:text-accent-hover text-sm">🎥 Recording</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-text-primary mb-12 text-center">Upcoming Events</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-text-primary">Resume Session 2</h3>
+                        <p class="text-sm text-accent">January 15, 2025</p>
+                    </div>
+                </div>
+                <p class="text-sm text-text-secondary">Advanced resume building for experienced students</p>
+            </div>
+            
+            <div class="card hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-text-primary">GRE Prep Workshop</h3>
+                        <p class="text-sm text-accent">January 25, 2025</p>
+                    </div>
+                </div>
+                <p class="text-sm text-text-secondary">Comprehensive GRE preparation strategies</p>
+            </div>
+            
+            <div class="card hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-3">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-text-primary">Industry Connect</h3>
+                        <p class="text-sm text-accent">February 10, 2025</p>
+                    </div>
+                </div>
+                <p class="text-sm text-text-secondary">Networking with industry professionals</p>
+            </div>
+        </div>
+    </div>
+</section> 
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 mt-16">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Brand -->
+            <div class="space-y-4">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-text-primary">MEMS D-AMP</span>
+                </div>
+                <p class="text-text-secondary text-sm">
+                    Supporting MEMS students with course reviews, internship experiences, and academic guidance.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-text-primary">Quick Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/courses" class="text-text-secondary hover:text-accent transition-colors">Course Reviews</a></li>
+                    <li><a href="/experiences" class="text-text-secondary hover:text-accent transition-colors">Internship Experiences</a></li>
+                    <li><a href="/tracks" class="text-text-secondary hover:text-accent transition-colors">Course Tracks</a></li>
+                    <li><a href="/team" class="text-text-secondary hover:text-accent transition-colors">Meet the Team</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="space-y-4">
+                <h3 class="text-lg font-semibold text-text-primary">Contact</h3>
+                <div class="space-y-2 text-sm text-text-secondary">
+                    <p>📧 damp.mems@iitb.ac.in</p>
+                    <p>📍 IIT Bombay, Mumbai</p>
+                    <p>🔗 <a href="https://mems.iitb.ac.in" class="hover:text-accent transition-colors">MEMS Department</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-gray-200">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-text-secondary">
+                    © 2024 MEMS D-AMP. Built with ❤️ for MEMS students.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                        <span class="sr-only">LinkedIn</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-text-secondary hover:text-accent transition-colors">
+                        <span class="sr-only">GitHub</span>
+                        <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> 
+    
+    <!-- Custom JS -->
+    <script src="/js/main.js"></script>
+    
+</body>
+</html> 

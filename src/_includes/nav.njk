@@ -1,0 +1,51 @@
+<nav class="glass-nav sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0">
+                <a href="/" class="flex items-center space-x-2">
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center">
+                        <img src="/images/Final DAMP logo (Without text).png" alt="MEMS D-AMP Logo" class="w-12 h-12 object-contain"/>
+                    </div>
+                    <span class="text-xl font-bold text-text-primary">MEMS D-AMP</span>
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="/" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                    <a href="/courses" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Course Reviews</a>
+                    <a href="/tracks" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Course Tracks</a>
+                    <a href="/experiences" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Experiences</a>
+                    <a href="/events" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Events</a>
+                    <a href="/team" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Team</a>
+                    <a href="/support" class="text-text-primary hover:text-accent px-3 py-2 rounded-md text-sm font-medium transition-colors">Support</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="text-text-primary hover:text-accent focus:outline-none focus:text-accent">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path x-show="mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-100 transform" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-75 transform" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <a href="/" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Home</a>
+            <a href="/courses" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Course Reviews</a>
+            <a href="/tracks" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Course Tracks</a>
+            <a href="/experiences" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Experiences</a>
+            <a href="/events" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Events</a>
+            <a href="/team" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+            <a href="/support" class="text-text-primary hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Support</a>
+        </div>
+    </div>
+</nav> 

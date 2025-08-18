@@ -1,0 +1,28 @@
+{
+  "name": "mems-damp-blog",
+  "version": "1.0.0",
+  "description": "MEMS D-AMP Blog - Course reviews, experiences, and resources for MEMS students",
+  "scripts": {
+    "build": "node build.js",
+    "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css --watch",
+    "build:css:prod": "tailwindcss -i ./src/css/tailwind.css -o ./src/css/styles.css --minify",
+    "serve": "eleventy --serve",
+    "dev": "eleventy --serve --watch",
+    "clean": "rm -rf _site",
+    "start": "npm run build && npm run serve"
+  },
+  "keywords": ["mems", "damp", "blog", "course-reviews", "internships"],
+  "author": "MEMS D-AMP Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-bundle": "^1.0.5",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  },
+  "dependencies": {
+    "fuse.js": "^7.0.0",
+    "alpinejs": "^3.13.3"
+  }
+} 
